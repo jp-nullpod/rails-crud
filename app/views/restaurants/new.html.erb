@@ -1,0 +1,15 @@
+<div>
+<h1>Create New Restaurant</h1>
+<%= form_with model: @restaurant do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+  <%= f.label :rating %>
+  <%= f.number_field :rating %>
+  <%= f.submit %>
+<% end %>
+<div>
+    <p><%= link_to "Back", restaurants_path %>
+</div>
+</div>
