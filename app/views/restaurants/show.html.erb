@@ -1,7 +1,11 @@
 <div>
     <h2><%= @restaurant.name %></h2>
     <p><%= @restaurant.address %></p>
-    <p><%= @restaurant.rating %></p>
+    <p>
+        <% (1..@restaurant.rating).each do |star|  %>
+            ⭐️
+        <% end %>
+    </p>
     <p><%= link_to "Back", restaurants_path %></p>
     <p>
     <%= link_to "Delete",

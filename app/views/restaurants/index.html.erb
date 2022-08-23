@@ -1,14 +1,16 @@
 <div>
-    <h2>
         <ul>
         <% @restaurants.each do |restaurant| %>
             <li>
-                <%= link_to restaurant.name, restaurant_path(restaurant.id) %>
+                <span style="font-size:22px"><%= link_to restaurant.name, restaurant_path(restaurant.id) %></span>
+                [<%= link_to "Edit", edit_restaurant_path(restaurant.id) %>]
             </li>
         <% end %>
-        </ul>
+
     </h2>
     <div>
-        <%= link_to "Create New Restaurant...", new_restaurant_path %>
+        <p>
+            <%= link_to "Create New Restaurant...", new_restaurant_path %>
+        </p>
     </div>
 </div>
